@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+
+<!--The list of tour vouchers-->
+<tourist-vouchers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xmlns="http://www.hubarevich.by/tourist-vouchers"
+                  xsi:schemaLocation="http://www.hubarevich.by/tourist-vouchers travel-vouchers.xsd">
+
+
+    <!--Country of visit. In case of multicountry trip:
+        The first country of visit-->
+    <international-voucher id="1001" country="Russian_Federation">
+        <!-- Tour type according to staying days-->
+        <voucher-type>holiday_tour</voucher-type>
+        <!--City of visit-->
+        <city>Moscow</city>
+        <!--Days/nights of staying-->
+        <number-days-nights>2/1</number-days-nights>
+        <!--Transfer type (bus,train,plain)-->
+        <transfer>train</transfer>
+        <!--Hotel/apartment/hostel/camping details-->
+        <hotel>Hotel</hotel>
+        <!--Cost per night in US dollars-->
+        <cost>50</cost>
+    </international-voucher>
+
+
+    <national-voucher id="1002" professional-union = "true">
+        <voucher-type>excursion</voucher-type>
+        <city>Braslav</city>
+        <number-days-nights>8/7</number-days-nights>
+        <transfer>bus</transfer>
+        <hotel>Village_house</hotel>
+        <cost>350.00</cost>
+    </national-voucher>
+
+    <international-voucher id="1003" country="Bulgari">
+        <voucher-type>recreation</voucher-type>
+        <city>Sofia</city>
+        <number-days-nights>12/11</number-days-nights>
+        <transfer>airplane</transfer>
+        <hotel>Hotel</hotel>
+        <cost>50.45</cost>
+    </international-voucher>
+
+    <international-voucher id="1004" country="Russian_Federation">
+        <voucher-type>holiday_tour</voucher-type>
+        <city>St.Petersburg</city>
+        <number-days-nights>3/2</number-days-nights>
+        <transfer>train</transfer>
+        <hotel>Hotel</hotel>
+        <cost>52.65</cost>
+    </international-voucher>
+
+    <international-voucher id="1005" country="Italy">
+        <voucher-type>recreation</voucher-type>
+        <city>Ostia</city>
+        <number-days-nights>14/13</number-days-nights>
+        <transfer>airplane</transfer>
+        <hotel>Camping</hotel>
+
+        <cost>31.56</cost>
+    </international-voucher>
+
+    <international-voucher id="1006" country="India">
+        <voucher-type>excursion</voucher-type>
+        <city>Delhi</city>
+        <number-days-nights>31/30</number-days-nights>
+        <transfer>airplane</transfer>
+        <hotel>Bungalow</hotel>
+
+        <cost>153.56</cost>
+    </international-voucher>
+
+    <international-voucher id="1007" country="USA">
+        <voucher-type>recreation</voucher-type>
+        <city>New-York</city>
+        <number-days-nights>4/3</number-days-nights>
+        <transfer>ship</transfer>
+        <hotel>Hotel</hotel>
+
+        <cost>1000.00</cost>
+    </international-voucher>
+
+    <international-voucher id="1008" country="Lithuania">
+        <voucher-type>holiday_tour</voucher-type>
+        <city>Vilnius</city>
+        <number-days-nights>1/2</number-days-nights>
+        <transfer>car</transfer>
+        <hotel>Hostel</hotel>
+
+        <cost>12.22</cost>
+    </international-voucher>
+
+    <international-voucher id="1009" country="Republic_Poland">
+        <voucher-type>shop_tour</voucher-type>
+        <city>Bialystok</city>
+        <number-days-nights>1/1</number-days-nights>
+        <transfer>bus</transfer>
+        <hotel>No</hotel>
+        <cost>23.45</cost>
+    </international-voucher>
+
+    <national-voucher id="1010" professional-union = "false">
+        <voucher-type>holiday_tour</voucher-type>
+        <city>Grodno</city>
+        <number-days-nights>2/1</number-days-nights>
+        <transfer>train</transfer>
+        <hotel>Hotel</hotel>
+        <cost>200.75</cost>
+    </national-voucher>
+
+    <national-voucher id="1011" professional-union = "true">
+        <voucher-type>holiday_tour</voucher-type>
+        <city>Minsk</city>
+        <number-days-nights>2/1</number-days-nights>
+        <transfer>bus</transfer>
+        <hotel>Hostel</hotel>
+        <cost>102.45</cost>
+    </national-voucher>
+
+    <international-voucher id="1012" country="France">
+        <voucher-type>excursion</voucher-type>
+        <city>Paris</city>
+        <number-days-nights>7/6</number-days-nights>
+        <transfer>airplane</transfer>
+        <hotel>Hotel</hotel>
+
+        <cost>51.65</cost>
+    </international-voucher>
+
+    <international-voucher id="1013" country="Czech_Republic">
+        <voucher-type>excursion</voucher-type>
+        <city>Prague</city>
+        <number-days-nights>7/6</number-days-nights>
+        <transfer>bus</transfer>
+        <hotel>Hotel</hotel>
+
+        <cost>32.5</cost>
+    </international-voucher>
+
+    <international-voucher id="1014" country="USA">
+        <voucher-type>ride</voucher-type>
+        <city>Odessa</city>
+        <number-days-nights>0/1</number-days-nights>
+        <transfer>motorcycle</transfer>
+        <hotel>Motel</hotel>
+
+        <cost>51.15</cost>
+    </international-voucher>
+
+    <international-voucher id="1015" country="Saudi_Arabia">
+        <voucher-type>hegira</voucher-type>
+        <city>Mekka</city>
+        <number-days-nights>60/61</number-days-nights>
+        <transfer>pedestrian</transfer>
+        <hotel>Desert</hotel>
+
+        <cost>72.22</cost>
+    </international-voucher>
+
+</tourist-vouchers>
+

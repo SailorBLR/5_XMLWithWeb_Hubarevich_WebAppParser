@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.hubarevich.by/tourist-vouchers"
+        xmlns:tns="http://www.hubarevich.by/tourist-vouchers"
+        elementFormDefault="qualified">
+
+    <element name="tourist-vouchers">
+    <complexType>
+        <sequence>
+            <element ref="tns:voucher"
+                     minOccurs="1"
+                     maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+
+
+    </element>
+
+
+    <element name="voucher" type="tns:common-voucher" abstract="true"></element>
+    <element name="international-voucher" type="tns:foreign-voucher" substitutionGroup="tns:voucher"></element>
+    <element name="national-voucher" type="tns:local-voucher" substitutionGroup="tns:voucher"></element>
+
+    <simpleType name="identification">
+        <restriction base="int">
+            <pattern value="[0-9]+"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="days-nights">
+        <restriction base="string">
+            <pattern value="[0-9]{1,2}.[0-9]{1,2}"/>
+        </restriction>
+    </simpleType>
+
+    <complexType name="common-voucher">
+
+        <sequence>
+            <element name="voucher-type">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="holiday_tour"/>
+                        <enumeration value="excursion"/>
+                        <enumeration value="recreation"/>
+                        <enumeration value="shop_tour"/>
+                        <enumeration value="ride"/>
+                        <enumeration value="hegira"/>
+                    </restriction>
+                </simpleType>
+            </element>
+
+            <element name="city" type="string" />
+
+            <element name="number-days-nights" type="tns:days-nights"/>
+            <element name="transfer">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="bus"/>
+                        <enumeration value="airplane"/>
+                        <enumeration value="train"/>
+                        <enumeration value="ship"/>
+                        <enumeration value="car"/>
+                        <enumeration value="motorcycle"/>
+                        <enumeration value="pedestrian"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="hotel">
+                <simpleType>
+                    <restriction base = "string">
+                        <enumeration value="Hotel"/>
+                        <enumeration value="Hostel"/>
+                        <enumeration value="Motel"/>
+                        <enumeration value="Village_house"/>
+                        <enumeration value="Camping"/>
+                        <enumeration value="Bungalow"/>
+                        <enumeration value="Desert"/>
+                        <enumeration value="No"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element type="float" name="cost"/>
+        </sequence>
+        <attribute name="id" type="tns:identification" use="required"/>
+
+    </complexType>
+
+    <complexType name="foreign-voucher">
+        <complexContent>
+            <extension base="tns:common-voucher">
+                <attribute name="country" type="string" use="required"/>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="local-voucher">
+        <complexContent>
+            <extension base="tns:common-voucher">
+                <attribute name="professional-union" type="boolean" use="required"/>
+            </extension>
+        </complexContent>
+    </complexType>
+
+</schema>
